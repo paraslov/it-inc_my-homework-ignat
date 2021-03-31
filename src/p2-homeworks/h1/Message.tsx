@@ -6,6 +6,7 @@ function Message(props: MessageType) {
     return (
         <div className={style.messageWrapper}>
             <img src={props.avatar} alt=""/>
+            <div className={style.angle}></div>
             <div className={style.message}>
                 <div>
                     <div className={style.userName}>{props.name}</div>
