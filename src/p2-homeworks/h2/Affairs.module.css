@@ -1,3 +1,31 @@
-.someClass {
+.wrapper {
+    width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 40px;
+    border: 1px solid #333;
+}
+.item {
+    padding: 15px;
+}
 
+.red {
+    color: red;
+}
+.orange {
+    color: orange;
+}
+.green {
+    color: green;
+}
+
+.btn {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.filterBtn {
+    width: 100px;
+    height: 30px;
+    margin: 15px;
 }
