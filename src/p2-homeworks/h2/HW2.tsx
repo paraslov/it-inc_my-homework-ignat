@@ -2,16 +2,16 @@ import React, {useState} from 'react'
 import Affairs from './Affairs'
 
 // types
-export type AffairPriorityType = 'high' | 'middle' | 'low' // need to fix any
+export type AffairPriorityType = 'high' | 'middle' | 'low'
 export type AffairType = {
     _id: number
     name: string
-    priority: string
+    priority: AffairPriorityType
 } // need to fix any
 export type FilterType = 'all' | AffairPriorityType
 
 // constants
-const defaultAffairs: AffairType[] = [ // need to fix any
+const defaultAffairs: AffairType[] = [
     {_id: 1, name: 'React', priority: 'high'},
     {_id: 2, name: 'anime', priority: 'low'},
     {_id: 3, name: 'games', priority: 'low'},
@@ -20,7 +20,7 @@ const defaultAffairs: AffairType[] = [ // need to fix any
 ]
 
 // pure helper functions
-export const filterAffairs = (affairs: AffairType[], filter: FilterType): Array<AffairType> => { // need to fix any
+export const filterAffairs = (affairs: AffairType[], filter: FilterType): Array<AffairType> => {
     if (filter === 'all') {
         return affairs
     } else if (filter === 'low') {
@@ -28,26 +28,26 @@ export const filterAffairs = (affairs: AffairType[], filter: FilterType): Array<
     } else if (filter === 'middle') {
         return affairs.filter(a => a.priority === 'middle')
     } else {
-        return affairs.filter(a => a.priority === 'high')
+        return affairs.filter(a => a.priority === 'high') // return affairs.filter(a => a.priority === filter)
     }
+
 }
-export const deleteAffair = (affairs: AffairType[], _id: number): Array<AffairType> => { // need to fix any
+export const deleteAffair = (affairs: AffairType[], _id: number): Array<AffairType> => {
     return affairs.filter(a => a._id !== _id)
 }
 
 function HW2() {
-    const [affairs, setAffairs] = useState<Array<AffairType>>(defaultAffairs) // need to fix any
+    const [affairs, setAffairs] = useState<Array<AffairType>>(defaultAffairs)
     const [filter, setFilter] = useState<FilterType>('all')
 
     const filteredAffairs = filterAffairs(affairs, filter)
-    const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id)) // need to fix any
+    const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id))
 
     return (
         <div>
             <hr/>
             homeworks 2
 
-            {/*should work (должно работать)*/}
             <Affairs
                 data={filteredAffairs}
                 setFilter={setFilter}

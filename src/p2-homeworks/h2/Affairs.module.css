@@ -1,20 +1,24 @@
 .wrapper {
     width: 600px;
+    margin-bottom: 1px;
     display: grid;
     grid-template-columns: 1fr 1fr 40px;
     border: 1px solid #333;
 }
+
 .item {
     padding: 15px;
 }
 
-.red {
+.high {
     color: red;
 }
-.orange {
+
+.middle {
     color: orange;
 }
-.green {
+
+.low {
     color: green;
 }
 
