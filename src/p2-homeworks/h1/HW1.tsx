@@ -11,7 +11,7 @@ export type MessageType = {
 const messageData: MessageType = {
     avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
     name: 'NyashMyash',
-    message: 'How are you doing?',
+    message: 'How are YOU doing?',
     time: '22:00',
 }
 

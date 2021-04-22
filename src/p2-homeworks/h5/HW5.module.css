@@ -1,0 +1,44 @@
+.headerLinks {
+    position: fixed;
+    transition: all 0.3s;
+    left: -100%;
+}
+
+.headerLinks.active {
+    margin-left: 5px;
+    transition: all 0.3s;
+    position: relative;
+    left: 0;
+}
+
+.toggleControl {
+    margin: 5px 0 0 5px;
+    cursor: pointer;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: #adff2f;
+    border: 1px solid #333333;
+}
+
+.headerLinks a {
+    text-decoration: none;
+    margin-right: 4px;
+    padding: 0 8px;
+    color: #333333;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.headerLinks a:hover {
+    color: darkmagenta;
+    background-color: #ddd;
+    border-color: darkmagenta;
+}
+
+.headerLinks a.activeLink {
+    color: darkmagenta;
+    background-color: #ddd;
+    border-color: darkmagenta;
+}
