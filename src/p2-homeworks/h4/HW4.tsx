@@ -6,7 +6,7 @@ import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
 
 function HW4() {
     const [text, setText] = useState<string>('')
-    const error = text ? '' : 'error'
+    const error = text ? '' : 'enter text plz'
 
     const showAlert = () => {
         if (error) {
@@ -47,7 +47,7 @@ function HW4() {
                     red // пропсу с булевым значением не обязательно указывать true
                     onClick={showAlert}
                 >
-                    delete {/*// название кнопки попадёт в children*/}
+                    X {/*// название кнопки попадёт в children*/}
                 </SuperButton>
 
                 <SuperButton disabled>

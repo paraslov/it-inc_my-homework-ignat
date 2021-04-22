@@ -5,7 +5,7 @@ import style from './Message.module.css'
 function Message(props: MessageType) {
     return (
         <div className={style.messageWrapper}>
-            <img src={props.avatar} alt=""/>
+            <img src={props.avatar} alt="girl"/>
             <div className={style.angle}></div>
             <div className={style.message}>
                 <div>
