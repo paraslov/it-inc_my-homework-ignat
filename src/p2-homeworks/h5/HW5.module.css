@@ -1,14 +1,16 @@
-.headerLinks {
-    position: fixed;
-    transition: all 0.3s;
-    left: -100%;
+.appWrapper {
+    margin: 5px;
 }
 
-.headerLinks.active {
-    margin-left: 5px;
-    transition: all 0.3s;
-    position: relative;
-    left: 0;
+.headerLinks {
+    width: 350px;
+    transition-duration: 500ms;
+    transform: translate(-255px);
+}
+
+.headerLinks:hover {
+    transition-duration: 500ms;
+    transform: translate(0);
 }
 
 .toggleControl {
