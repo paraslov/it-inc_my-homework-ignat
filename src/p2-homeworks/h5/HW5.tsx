@@ -9,11 +9,8 @@ function HW5() {
         <div className={s.appWrapper}>
             {/*в gh-pages лучше работает HashRouter*/}
             <HashRouter>
-
                 <Header/>
-
                 <Routes/>
-
             </HashRouter>
         </div>
     )

@@ -21,15 +21,3 @@
 .low {
     color: green;
 }
-
-.btn {
-    width: 30px;
-    height: 30px;
-    margin-top: 10px;
-}
-
-.filterBtn {
-    width: 100px;
-    height: 30px;
-    margin: 15px;
-}

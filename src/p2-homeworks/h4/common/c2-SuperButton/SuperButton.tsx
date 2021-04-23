@@ -14,6 +14,7 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
         ...restProps// все остальные пропсы попадут в объект restProps, там же будет children
     }
 ) => {
+
     const finalClassName = disabled ? `${s.disabled}` : `${s.default} ${red ? s.red : ''} ${className}`
 
     return (

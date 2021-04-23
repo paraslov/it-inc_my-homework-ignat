@@ -1,12 +1,12 @@
 .default {
     font-size: 14px;
-    min-height: 30px;
-    min-width: 70px;
+    height: 30px;
+    width: 70px;
     border-radius: 5px;
 }
 
 .default:hover {
-    background-color: #bbb;
+    background-color: #ddd;
 }
 
 .red {
@@ -19,7 +19,7 @@
 
 .disabled {
     font-size: 14px;
-    min-height: 30px;
-    min-width: 70px;
+    height: 30px;
+    width: 70px;
     border-radius: 5px;
 }
