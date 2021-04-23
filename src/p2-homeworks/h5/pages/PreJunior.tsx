@@ -8,6 +8,9 @@ import HW6 from '../../h6/HW6';
 function PreJunior() {
     return (
         <div>
+            <hr/>
+            Pre-junior homeworks.
+            <hr/>
             <HW1/>
             <HW2/>
             <HW3/>
