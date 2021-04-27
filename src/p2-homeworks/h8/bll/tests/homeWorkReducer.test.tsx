@@ -1,4 +1,4 @@
-import {homeWorkReducer} from '../homeWorkReducer'
+import {checkActionCreator, homeWorkReducer, sortActionCreator} from '../homeWorkReducer'
 import {UserType} from '../../HW8';
 
 let initialState: UserType[]
@@ -15,14 +15,14 @@ beforeEach(() => {
 })
 
 test('sort name up', () => {
-    const newState = homeWorkReducer(initialState, {type: 'sort', payload: 'up'})
+    const newState = homeWorkReducer(initialState, sortActionCreator('up'))
 
     console.log(newState)
     expect(newState[0].name).toBe('Александр')
     expect(newState[5].name).toBe('Кот')
 })
 test('sort name down', () => {
-    const newState = homeWorkReducer(initialState, {type: 'sort', payload: 'down'})
+    const newState = homeWorkReducer(initialState, sortActionCreator('down'))
 
     console.log(newState)
     expect(newState[5].name).toBe('Александр')
@@ -30,7 +30,7 @@ test('sort name down', () => {
 
 })
 test('check age 18', () => {
-    const newState = homeWorkReducer(initialState, {type: 'check', payload: 18})
+    const newState = homeWorkReducer(initialState, checkActionCreator(18))
 
     console.log(newState)
     expect(newState.length).toBe(4)
