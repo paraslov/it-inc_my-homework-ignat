@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/it-inc_my-homework-ignat/static/css/main.a69f22e2.chunk.css",
-    "main.js": "/it-inc_my-homework-ignat/static/js/main.325bc55c.chunk.js",
-    "main.js.map": "/it-inc_my-homework-ignat/static/js/main.325bc55c.chunk.js.map",
+    "main.css": "/it-inc_my-homework-ignat/static/css/main.87645a9f.chunk.css",
+    "main.js": "/it-inc_my-homework-ignat/static/js/main.6bf41591.chunk.js",
+    "main.js.map": "/it-inc_my-homework-ignat/static/js/main.6bf41591.chunk.js.map",
     "runtime-main.js": "/it-inc_my-homework-ignat/static/js/runtime-main.d45673de.js",
     "runtime-main.js.map": "/it-inc_my-homework-ignat/static/js/runtime-main.d45673de.js.map",
-    "static/js/2.e359d774.chunk.js": "/it-inc_my-homework-ignat/static/js/2.e359d774.chunk.js",
-    "static/js/2.e359d774.chunk.js.map": "/it-inc_my-homework-ignat/static/js/2.e359d774.chunk.js.map",
+    "static/js/2.6a85a3ee.chunk.js": "/it-inc_my-homework-ignat/static/js/2.6a85a3ee.chunk.js",
+    "static/js/2.6a85a3ee.chunk.js.map": "/it-inc_my-homework-ignat/static/js/2.6a85a3ee.chunk.js.map",
     "index.html": "/it-inc_my-homework-ignat/index.html",
-    "static/css/main.a69f22e2.chunk.css.map": "/it-inc_my-homework-ignat/static/css/main.a69f22e2.chunk.css.map",
-    "static/js/2.e359d774.chunk.js.LICENSE.txt": "/it-inc_my-homework-ignat/static/js/2.e359d774.chunk.js.LICENSE.txt"
+    "static/css/main.87645a9f.chunk.css.map": "/it-inc_my-homework-ignat/static/css/main.87645a9f.chunk.css.map",
+    "static/js/2.6a85a3ee.chunk.js.LICENSE.txt": "/it-inc_my-homework-ignat/static/js/2.6a85a3ee.chunk.js.LICENSE.txt",
+    "static/media/spinner-icon.07a3b34f.gif": "/it-inc_my-homework-ignat/static/media/spinner-icon.07a3b34f.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.d45673de.js",
-    "static/js/2.e359d774.chunk.js",
-    "static/css/main.a69f22e2.chunk.css",
-    "static/js/main.325bc55c.chunk.js"
+    "static/js/2.6a85a3ee.chunk.js",
+    "static/css/main.87645a9f.chunk.css",
+    "static/js/main.6bf41591.chunk.js"
   ]
 }
