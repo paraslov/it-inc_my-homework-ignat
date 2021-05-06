@@ -21,13 +21,22 @@ const btnStyle = {
     width: '150px',
     margin: '5px'
 }
+const tableRowStyle = {
+    padding:'3px',
+    border: '1px solid #333',
+    width: '150px',
+    borderRadius: '3px',
+    display: 'flex',
+    justifyContent: 'space-between'
+}
 
 function HW8() {
     const [people, setPeople] = useState<UserType[]>(initialPeople) // need to fix any
 
     const finalPeople = people.map(p => (
-        <div key={p._id}>
-            {p.name}, {p.age}
+        <div key={p._id} style={tableRowStyle}>
+            <div>{p.name}</div>
+            <div>{p.age}</div>
         </div>
     ))
 
@@ -40,11 +49,12 @@ function HW8() {
             <hr/>
             homeworks 8
 
-            {finalPeople}
+                <div style={{margin:'5px'}}>{finalPeople}</div>
 
-            <div><SuperButton style={btnStyle} onClick={sortUp}>sort up</SuperButton></div>
-            <div><SuperButton style={btnStyle} onClick={sortDown}>sort down</SuperButton></div>
-            <div><SuperButton style={btnStyle} onClick={check18}>check 18</SuperButton></div>
+                <div><SuperButton style={btnStyle} onClick={sortUp}>sort up</SuperButton></div>
+                <div><SuperButton style={btnStyle} onClick={sortDown}>sort down</SuperButton></div>
+                <div><SuperButton style={btnStyle} onClick={check18}>check 18</SuperButton></div>
+
 
             <hr/>
             {/*для личного творчества, могу проверить*/}

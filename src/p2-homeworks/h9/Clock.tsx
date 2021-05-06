@@ -1,49 +1,59 @@
 import React, {useState} from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 
+const styleBtn = {margin: '5px'}
+
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0)
-    const [date, setDate] = useState<Date>()
+    const [date, setDate] = useState<Date>(new Date())
     const [show, setShow] = useState<boolean>(false)
 
     const stop = () => {
-        // stop
+        clearInterval(timerId)
     }
     const start = () => {
         stop()
         const id: number = window.setInterval(() => {
-            // setDate
+            setDate(new Date)
         }, 1000)
         setTimerId(id)
     }
 
     const onMouseEnter = () => {
-        // show
+        setShow(true)
     }
     const onMouseLeave = () => {
-        // close
+        setShow(false)
     }
 
-    const stringTime = 'Time' // fix with date
-    const stringDate = 'Date' // fix with date
+    const stringTime = `${date.getHours() < 10 ? `0${date.getHours()}` : date.getHours()} :
+        ${date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes()} :
+        ${date.getSeconds() < 10 ? `0${date.getSeconds()}` : date.getSeconds()}`
+
+    const stringDate = `${date.getFullYear()}.`+
+        `${date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1}.`+
+        `${date.getDate()< 10 ? `0${date.getDate()}` : date.getDate()}`
 
     return (
         <div>
-            <div
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-            >
-                {stringTime}
+            <div style={{height:"50px", margin: '10px 0 0 80px'}}>
+                <div
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
+                    style={{width: '90px'}}
+                >
+                    {stringTime}
+                </div>
+
+                {show && (
+                    <div>
+                        {stringDate}
+                    </div>
+                )}
             </div>
 
-            {show && (
-                <div>
-                    {stringDate}
-                </div>
-            )}
-
-            <SuperButton onClick={start}>start</SuperButton>
-            <SuperButton onClick={stop}>stop</SuperButton>
+            <SuperButton style={styleBtn} onClick={start}>start</SuperButton>
+            <SuperButton style={styleBtn} onClick={stop}>stop</SuperButton>
 
         </div>
     )
