@@ -1,23 +1,37 @@
-import React from "react";
-import s from "./HW12.module.css";
+import React, {ChangeEvent, useCallback, useEffect} from 'react'
+import s from './HW12.module.css'
+import SuperSelect from '../h7/common/c5-SuperSelect/SuperSelect'
+import {useDispatch, useSelector} from 'react-redux'
+import {changeTheme, selectTheme, TTheme} from './bll/themeReducer'
 
-const themes = ['dark', 'red', 'some'];
+const themesOptions: TTheme[] = ['dark', 'red', 'some', 'myTheme']
 
-function HW12() {
-    const theme = 'some'; // useSelector
+export type THW12Props = {
+    theme?: TTheme
+}
 
-    // useDispatch, onChangeCallback
+function HW12(props: THW12Props) {
+    const dispatch = useDispatch()
+    const theme = useSelector(selectTheme)
+
+    useEffect(() => {
+        if (props.theme) {
+            dispatch(changeTheme(props.theme))
+        }
+    }, [dispatch])
+
+    const onChangeCallback = useCallback((e: ChangeEvent<HTMLSelectElement>) =>
+        dispatch(changeTheme(e.currentTarget.value as TTheme)), [theme, dispatch])
 
     return (
         <div className={s[theme]}>
             <hr/>
-            <span className={s[theme + '-text']}>
+            <span className={s[theme + '-text']} style={{marginRight: '10px'}}>
                 homeworks 12
             </span>
-
-            {/*should work (должно работать)*/}
-            {/*SuperSelect or SuperRadio*/}
-
+            <SuperSelect options={themesOptions}
+                         value={theme}
+                         onChange={onChangeCallback}/>
             <hr/>
         </div>
     );

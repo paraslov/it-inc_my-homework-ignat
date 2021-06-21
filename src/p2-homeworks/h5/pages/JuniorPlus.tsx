@@ -1,4 +1,7 @@
 import React from 'react'
+import HW12 from '../../h12/HW12';
+import {Provider} from 'react-redux';
+import store from '../../h10/bll/store';
 
 function JuniorPlus() {
     return (
@@ -6,7 +9,9 @@ function JuniorPlus() {
             <hr/>
             Junior Plus homeworks will be placed here soon enough...
             <hr/>
-            {/*<HW12/>*/}
+            <Provider store={store} >
+                <HW12/>
+            </Provider>
             {/*<HW13/>*/}
             {/*<HW14/>*/}
             {/*<HW15/>*/}

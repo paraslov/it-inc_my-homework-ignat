@@ -21,3 +21,12 @@
 .some-text {
     color: darkslateblue;
 }
+
+.myTheme {
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+.myTheme-text {
+    color: #333;
+    font-style: italic;
+}
